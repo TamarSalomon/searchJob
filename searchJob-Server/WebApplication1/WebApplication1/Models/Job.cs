@@ -1,32 +1,23 @@
-namespace WebApplication1.Models
+public class Job
 {
-    public class Job
+    public Job(JobField jobfield, string jobName, int scopeOfHours, string requirements, bool workingFromHome, Area area)
     {
-
-     public Job( jobField jobfield ,string  jobName ,int scopeOfHours ,string requirements,
-     bool WorkingFromHome  ,Area area )
-     {
-       this.jobfield = jobfield;
-        this.jobName=jobName;
-        this.scopeOfHours=scopeOfHours;
-        this.requirements=requirements;
-        this.WorkingFromHome=WorkingFromHome;
-        this.area=area;
-     
-     }
-    
-        public jobField jobfield {get; set;}
-
-        public Area area {get; set;}
-       
-        public string jobName { get; set; }
-        public int scopeOfHours { get; set; }
-        public string requirements  { get; set; }
-       
-       public bool WorkingFromHome {get; set;}
+        this.jobfield = jobfield;
+        this.jobName = jobName;
+        this.scopeOfHours = scopeOfHours;
+        this.requirements = requirements;
+        this.workingFromHome = workingFromHome;
+        this.area = area;
     }
 
-    public enum jobField { PROGRAMMER, ANALYST, QA}
-
-    public enum Area{NORTH,SOUTH,CENTER}
+    public JobField jobfield { get; set; }
+    public Area area { get; set; }
+    public string jobName { get; set; }
+    public int scopeOfHours { get; set; }
+    public string requirements { get; set; }
+    public bool workingFromHome { get; set; }
+   
 }
+
+public enum JobField { PROGRAMMER, ANALYST, QA }
+public enum Area { NORTH, SOUTH, CENTER }

@@ -1,0 +1,25 @@
+<div id="home"><header>
+    <div>
+        <div class="menu">
+            <a [routerLink]="'/login'"><img src="../../../assets/לוגו.PNG" alt="" srcset=""></a>
+            <h4 appBoldName="'gray'">hello {{nameUser}}</h4>
+
+            <h4>count CV you send:{{getCount()}}</h4>
+            
+             <a [routerLink]="'/jobs/' + jobField[getUser()?.jobfield!]">{{jobField[getUser()?.jobfield!]}}</a>
+            <select>
+            <option value="">the jobs you sent your cv</option>
+            <option *ngFor="let company of JobsSelect" [value]="company">{{company}}</option>
+          </select>
+
+
+        </div>
+    </div>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+    <p>contact ☎️ 0556729929 </p>
+</footer>
+</div>

@@ -9,9 +9,9 @@ namespace WebApplication1.Models
         public string Password { get; set; }
 
 
-        public  jobField jobfield {get; set;}
+        public  JobField jobfield {get; set;}
 
-         public User(int Id ,string Name,string Password ,jobField jobfield)
+         public User(int Id ,string Name,string Password ,JobField jobfield)
     {
         this.Id=Id;
         this.Name=Name;

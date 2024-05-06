@@ -1,0 +1,18 @@
+<div class="job-container">
+    <h1>{{job?.jobName}}</h1>
+    <p>field: {{jobField[job?.jobfield!]}}</p>
+    <p>scope of hours: {{job?.scopeOfHours}}</p>
+    <p>area: {{jobArea[job?.area!]}}</p>
+
+    <details>
+        <summary>details</summary>
+        <p>requirements: {{job?.requirements}}</p>
+
+        <div [ngSwitch]="job?.workingFromHome">WorkingFromHome:
+            <p *ngSwitchCase="true">✔️</p>
+            <p *ngSwitchCase="false">❌</p>
+        </div>
+    </details>
+
+    <button (click)="sendCV()">send CV</button>
+</div>

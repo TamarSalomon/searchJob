@@ -1,0 +1,8 @@
+<div id="login"><form [formGroup]="loginForm!" class="login-form">
+  <input type="text" formControlName="name" name="name" id="name" placeholder="enter your name" required>
+  <input type="password" formControlName="password" (blur)="checkPassword()" name="password" id="password" placeholder="enter your password" required>
+  <button type="button" (click)="loginClick()">login</button>
+</form>
+</div>
+
+  
