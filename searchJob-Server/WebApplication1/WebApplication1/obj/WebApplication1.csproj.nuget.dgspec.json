@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\The user\\Desktop\\לימודים\\אנגולר\\MyProject\\30-04\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
+    "Z:\\B\\סלומון תמר\\אנגולר\\07-05\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\The user\\Desktop\\לימודים\\אנגולר\\MyProject\\30-04\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
+    "Z:\\B\\סלומון תמר\\אנגולר\\07-05\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\The user\\Desktop\\לימודים\\אנגולר\\MyProject\\30-04\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "Z:\\B\\סלומון תמר\\אנגולר\\07-05\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\The user\\Desktop\\לימודים\\אנגולר\\MyProject\\30-04\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-        "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\The user\\Desktop\\לימודים\\אנגולר\\MyProject\\30-04\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\obj\\",
+        "projectPath": "Z:\\B\\סלומון תמר\\אנגולר\\07-05\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
+        "outputPath": "Z:\\B\\סלומון תמר\\אנגולר\\07-05\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\The user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\huser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +56,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -67,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,7 +4,8 @@ import { Area } from '../../models/Area';
 import { JobField } from '../../models/JobField';
 import { Job } from '../../models/Job';
 import { ActivatedRoute, Router } from '@angular/router';
-import { log } from 'console';
+
+
 
 @Component({
   selector: 'app-jobs',
