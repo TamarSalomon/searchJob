@@ -12,7 +12,6 @@ namespace WebApplication1.Controllers
 
         public static List<Job> myJobs = new List<Job>()
         {
-             new Job(JobField.QA, "Elad Software", 45, "BA",  false, Area.NORTH),
             new Job(JobField.ANALYST, "Malam" , 45, "BA", false, Area.NORTH),
             new Job(JobField.PROGRAMMER, "ToopGroup", 30, "Maat", true, Area.SOUTH),
             new Job(JobField.QA, "Matrix", 45, "BA",  false, Area.SOUTH),
@@ -24,7 +23,7 @@ namespace WebApplication1.Controllers
 
             new Job(JobField.PROGRAMMER, "NESS", 24, "Maat", true, Area.SOUTH),
             new Job(JobField.ANALYST, "CODE OASIS", 22, "BA", true, Area.CENTER),
-
+             new Job(JobField.QA, "Elad", 45, "BA",  false, Area.NORTH),
             new Job(JobField.PROGRAMMER, "Software AG", 31, "Maat", true, Area.NORTH),
             new Job(JobField.ANALYST, " FatFish", 30, "BA", true, Area.SOUTH),
 
