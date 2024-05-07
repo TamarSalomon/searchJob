@@ -1,9 +1,6 @@
 <form [formGroup]="loginForm!" class="login-form">
-  <input type="text" formControlName="name" name="name" id="name" placeholder="enter your name"  >
-  <input type="password" formControlName="password" (blur)="checkPassword()" name="password" id="password" placeholder="enter your password"
-  >
+  <input type="text" formControlName="name" name="name" id="name" placeholder="enter your name">
+  <input type="password" formControlName="password" (blur)="checkPassword()" name="password" id="password"
+    placeholder="enter your password">
   <button type="button" (click)="loginClick()">login</button>
 </form>
-
-
-  

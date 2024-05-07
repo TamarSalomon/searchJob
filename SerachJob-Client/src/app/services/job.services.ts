@@ -22,14 +22,14 @@ export class JobServices {
     return this.http.get<Job[]>("https://localhost:5001/api/Job/GetAllJobs");
   }
 
-  filterJobs(jobfield: string , jobarea: string): Observable<Job[]> {
+  filterJobs(jobfield: string, jobarea: string): Observable<Job[]> {
     return this.getJobsFromServer().pipe(
       map((res: any) => res.filter((job: any) => {
-         return (!jobfield || JobField[job.jobfield] === jobfield) &&
-              (!jobarea || Area[job.area] === jobarea);
+        return (!jobfield || JobField[job.jobfield] === jobfield) &&
+          (!jobarea || Area[job.area] === jobarea);
       }))
     );
-}
+  }
 
 
 

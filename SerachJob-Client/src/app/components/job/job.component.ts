@@ -15,16 +15,16 @@ export class JobComponent implements OnInit {
   jobField = JobField;
   jobArea = Area;
   jobsList: string[] = [];
-  IfSend:boolean=false;
+  IfSend: boolean = false;
 
-  constructor(private CvService: cvService) {}
+  constructor(private CvService: cvService) { }
   ngOnInit(): void {
     this.jobsList = this.CvService.JobsList;
 
   }
 
   @Input() job: Job | null = null;
- 
+
 
   sendCV() {
     this.CvService.addJobToList(this.job?.jobName!);
@@ -32,8 +32,8 @@ export class JobComponent implements OnInit {
 
   ifSend() {
     return this.job && this.job.jobName && this.jobsList.includes(this.job.jobName);
-}
+  }
 
-  
+
 }
 

@@ -1,10 +1,10 @@
 .top-navigation {
     font-size: 25px;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     color: rgb(239, 145, 105);
-    padding: 10px; 
+    padding: 10px;
 }
 
 .top-navigation a {
@@ -15,24 +15,25 @@
 
 
 h4 {
-    margin: 0; 
-}
-select {
-    margin-left: auto; 
+    margin: 0;
 }
 
-.top-navigation > *:not(:last-child) {
+select {
+    margin-left: auto;
+}
+
+.top-navigation>*:not(:last-child) {
     margin-right: 7%;
 }
 
 footer {
-    color: rgb(239,145,105);
+    color: rgb(239, 145, 105);
     text-align: center;
 }
 
 img {
     margin-top: 10px;
     width: 270px;
-    height: 83%; 
+    height: 83%;
     margin-right: 0%;
 }

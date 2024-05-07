@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "08dm9idLdpCUQM9nQ3bpnPxDN/JM9zOsGRTgCQ+PfuNb6wx+Cg1AAsMH/iCeMC/0lJlhUZXoWUQuxlM1i+QlZA==",
+  "dgSpecHash": "P2PVCFZj0RdoRo+bm55XFf5Bys9D0PY4v+uWHclHSc3Wp+0bS/gthFim9AMEWif5HP9XwPpMR3fGIiit2T9LyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\The user\\Desktop\\לימודים\\אנגולר\\MyProject\\08-06-4\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\The user\\Desktop\\לימודים\\אנגולר\\MyProject\\סופי\\searchJob\\searchJob-Server\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

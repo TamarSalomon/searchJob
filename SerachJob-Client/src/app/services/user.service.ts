@@ -10,13 +10,13 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
 
-  getUserFromServer(name: string , password:string) {
-    const url=`https://localhost:5001/api/User?Name=${name}&Password=${password}`;
+  getUserFromServer(name: string, password: string) {
+    const url = `https://localhost:5001/api/User?Name=${name}&Password=${password}`;
     return this.http.get(url);
   }
 
- 
-  
+
+
 
 
 

@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit  {
+export class HomeComponent implements OnInit {
   jobsList: string[] = [];
   nameUser: string | null = null;
   jobField = JobField;
@@ -19,14 +19,14 @@ export class HomeComponent implements OnInit  {
     this.jobsList = this.CvService.JobsList;
     const userData = localStorage.getItem("userData");
     if (userData) {
-        const user = JSON.parse(userData);
-        this.nameUser = user.name;
+      const user = JSON.parse(userData);
+      this.nameUser = user.name;
     }
   }
 
   getCount() {
     return this.CvService.countCV();
-  } 
+  }
 
   getUser() {
     return JSON.parse(localStorage.getItem("userData")!);

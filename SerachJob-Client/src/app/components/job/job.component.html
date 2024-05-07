@@ -7,12 +7,13 @@
     <details>
         <summary>details</summary>
         <p>requirements: {{job?.requirements}}</p>
-
         <div [ngSwitch]="job?.workingFromHome">WorkingFromHome:
             <p *ngSwitchCase="true">✔️</p>
             <p *ngSwitchCase="false">❌</p>
         </div>
     </details>
 
-    <button [disabled]="ifSend()" (click)="sendCV()" [ngStyle]="{ 'opacity': ifSend() ? '0.5' : '1', 'cursor': ifSend() ? 'not-allowed' : 'pointer' }">send CV</button>
+    <button [disabled]="ifSend()" (click)="sendCV()"
+        [ngStyle]="{ 'opacity': ifSend() ? '0.5' : '1', 'cursor': ifSend() ? 'not-allowed' : 'pointer' }">send
+        CV</button>
 </div>
