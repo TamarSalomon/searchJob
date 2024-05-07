@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { JobServices } from '../../services/job.services';
 import { Area } from '../../models/Area';
 import { JobField } from '../../models/JobField';
@@ -9,17 +9,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobs',
-  templateUrl: './jobs.component.html',
-  styleUrl: './jobs.component.scss'
+  templateUrl: './jobs-list.component.html',
+  styleUrl: './jobs-list.component.scss'
 })
 
-export class JobsComponent {
+export class JobsComponent implements OnInit {
 
-  public allJobs: Job[] = [];
-  public jobs: Job[] = [];
-
-  public flag = false
-  constructor(private jobsSvc: JobServices, private router: Router, private activeRouter: ActivatedRoute) {
+ allJobs: Job[] = [];
+  flag = false
+  constructor(private jobsSvc: JobServices, private router: Router,  private route: ActivatedRoute) {
   }
   ngOnInit(): void {
     if (!(localStorage.getItem('userData'))) {
@@ -30,10 +28,10 @@ export class JobsComponent {
     this.jobsSvc.getJobsFromServer().subscribe(jobs => {
       this.allJobs = jobs;
     })
-    this.activeRouter.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe(params => {
       let jobfield = params.get('jobField');
       if (jobfield != null)
-        this.change(jobfield, "")
+        this.filter(jobfield, "")
 
 
 
@@ -53,7 +51,7 @@ export class JobsComponent {
     return Object.keys(Area).filter((v) => isNaN(Number(v)));
   }
 
-  change(jobField: string, jobArea: string) {
+  filter(jobField: string, jobArea: string) {
       this.jobsSvc.filterJobs(jobField, jobArea).subscribe(jobs => {
           this.allJobs = jobs;
 

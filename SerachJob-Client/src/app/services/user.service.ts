@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/User';
 import { JobField } from '../models/JobField';
 import { HttpClient } from '@angular/common/http'
 import { Observable, Observer } from 'rxjs';
@@ -11,8 +10,8 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
 
-  getUserFromServer(user: User) {
-    const url=`https://localhost:5001/api/User?Name=${user.Name}&Password=${user.Password}`;
+  getUserFromServer(name: string , password:string) {
+    const url=`https://localhost:5001/api/User?Name=${name}&Password=${password}`;
     return this.http.get(url);
   }
 

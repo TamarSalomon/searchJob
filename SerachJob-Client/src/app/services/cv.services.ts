@@ -6,13 +6,13 @@ import { Observable, Observer } from 'rxjs';
   providedIn: 'root'
 })
 export class cvService{
-  jobSelect:string[]=[];
+  JobsList:string[]=[];
 
-  sendCV(nameCompany:string){
-        this.jobSelect.push(nameCompany);
+  addJobToList(nameCompany:string){
+        this.JobsList.push(nameCompany);
      
   }
   countCV(){
-      return this.jobSelect.length|0;
+      return this.JobsList.length|0;
   }
 }

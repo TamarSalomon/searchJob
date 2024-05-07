@@ -1,0 +1,21 @@
+
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: rgb(239, 145, 105); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2em;
+    animation: pulse 1s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1); 
+    }
+    to {
+      transform: scale(1.3); 
+    }
+  }
+  

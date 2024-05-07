@@ -14,5 +14,5 @@
         </div>
     </details>
 
-    <button (click)="sendCV()">send CV</button>
+    <button [disabled]="ifSend()" (click)="sendCV()" [ngStyle]="{ 'opacity': ifSend() ? '0.5' : '1', 'cursor': ifSend() ? 'not-allowed' : 'pointer' }" >send CV</button>
 </div>

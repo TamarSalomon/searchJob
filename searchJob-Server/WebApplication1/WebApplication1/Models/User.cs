@@ -3,19 +3,19 @@ namespace WebApplication1.Models
 {
     public class User
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
       
-        public string Password { get; set; }
+        public string password { get; set; }
 
 
         public  JobField jobfield {get; set;}
 
-         public User(int Id ,string Name,string Password ,JobField jobfield)
+         public User(int id ,string name,string password ,JobField jobfield)
     {
-        this.Id=Id;
-        this.Name=Name;
-        this.Password=Password;
+        this.id=id;
+        this.name=name;
+        this.password=password;
         this.jobfield=jobfield;
     }
     }

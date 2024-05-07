@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { cvService } from '../../services/cv.services';
 import { JobField } from "../../models/JobField";
 import { ActivatedRoute } from '@angular/router';
@@ -8,28 +8,27 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  JobsSelect: string[] = [];
-  
-  constructor(private cvservice: cvService ) {
-    this.JobsSelect = this.cvservice.jobSelect;
-  }
- 
+export class HomeComponent implements OnInit  {
+  jobsList: string[] = [];
   nameUser: string | null = null;
   jobField = JobField;
+
+  constructor(private CvService: cvService, private route: ActivatedRoute) { }
+
   ngOnInit(): void {
+    this.jobsList = this.CvService.JobsList;
     const userData = localStorage.getItem("userData");
     if (userData) {
-        const data = JSON.parse(userData);
-        this.nameUser = data.name;
+        const user = JSON.parse(userData);
+        this.nameUser = user.name;
     }
   }
 
   getCount() {
-    return this.cvservice.countCV()
+    return this.CvService.countCV();
   } 
 
-  getUser(){
+  getUser() {
     return JSON.parse(localStorage.getItem("userData")!);
   }
 }

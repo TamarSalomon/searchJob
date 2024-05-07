@@ -1,25 +1,30 @@
-<div id="home"><header>
+<header>
     <div>
         <div class="menu">
             <a [routerLink]="'/login'"><img src="../../../assets/לוגו.PNG" alt="" srcset=""></a>
             <h4 appBoldName="'gray'">hello {{nameUser}}</h4>
-
             <h4>count CV you send:{{getCount()}}</h4>
-            
-             <a [routerLink]="'/jobs/' + jobField[getUser()?.jobfield!]">{{jobField[getUser()?.jobfield!]}}</a>
             <select>
             <option value="">the jobs you sent your cv</option>
-            <option *ngFor="let company of JobsSelect" [value]="company">{{company}}</option>
+            <option *ngFor="let company of jobsList" [value]="company">{{company}}</option>
           </select>
+          <a [routerLink]="'/jobs/' + jobField[getUser()?.jobfield!]">{{jobField[getUser()?.jobfield!]}}</a>
 
 
         </div>
     </div>
 </header>
-
 <router-outlet></router-outlet>
-
 <footer>
-    <p>contact ☎️ 0556729929 </p>
+    <div class="contact-info">
+        <h3>Contact details for the site manager:</h3>
+        <ul>
+            <li><strong>Name:</strong> Batya Finkelstein and Tamar Solomon</li>
+            <li><strong>Phone:</strong> 054-1234567</li>
+            <li><strong>Email:</strong> b456gmail.com</li>
+            <li><strong>Fax:</strong> 02-1234567</li>
+        </ul>
+    </div>
 </footer>
-</div>
+
+

@@ -29,19 +29,19 @@ namespace WebApplication1.Controllers
             };
 
         [HttpGet()]
-        public ActionResult<User> Get(string? Name, string? Password)
+        public ActionResult<User> Get(string? name, string? password)
         {
             User myUser = null;
 
             foreach (User user in allUsers)
 
             {
-                if (user.Name == Name && user.Password == Password)
+                if (user.name ==name && user.password == password)
                     myUser = user;
             }
 
 
-            if (myUser == null || Password == null || myUser.Password != Password)
+            if (myUser == null || password == null || myUser.password != password)
                 return null;
             return myUser;
 

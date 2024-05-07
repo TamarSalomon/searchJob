@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Job } from '../../models/Job';
 import { Area } from '../../models/Area';
 import { JobField } from '../../models/JobField';
@@ -10,32 +10,30 @@ import { cvService } from '../../services/cv.services';
   templateUrl: './job.component.html',
   styleUrls: ['./job.component.scss']
 })
-export class JobComponent {
 
-  constructor(private cvservice: cvService ) {
-    
-  }
-  @Input()  job: Job | null = null;
-  ifClick:boolean=false;
+export class JobComponent implements OnInit {
   jobField = JobField;
   jobArea = Area;
-  ifSend: boolean = false;
-  showDetails = false;
+  jobsList: string[] = [];
+  IfSend:boolean=false;
 
-  
+  constructor(private CvService: cvService) {}
+  ngOnInit(): void {
+    this.jobsList = this.CvService.JobsList;
 
-  sendCV() 
-  {
-    this.cvservice.sendCV(this.job?.jobName!);
-
-    
-   
-  }
-  toggleDetails() {
-    console.log('WorkingFromHome value:', this.job?.workingFromHome!);
-    this.showDetails = !this.showDetails;
   }
 
-  
+  @Input() job: Job | null = null;
  
+
+  sendCV() {
+    this.CvService.addJobToList(this.job?.jobName!);
+  }
+
+  ifSend() {
+    return this.job && this.job.jobName && this.jobsList.includes(this.job.jobName);
 }
+
+  
+}
+

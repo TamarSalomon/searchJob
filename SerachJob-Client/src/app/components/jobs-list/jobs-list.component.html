@@ -1,11 +1,11 @@
 <div class="jobs-div">
     <form ngForm>
-        <select  #field name="" id="" (change)="change(field.value, area.value)">
+        <select  #field name="" id="" (change)="filter(field.value, area.value)">
               <option value="">all domains</option>  
             <option *ngFor="let f of getFields()">{{f}}</option>
         </select>
 
-        <select #area name="" id="" (change)="change(field.value, area.value)">
+        <select #area name="" id="" (change)="filter(field.value, area.value)">
              <option value="">all areas</option>  
             <option *ngFor="let a of getAreas()">{{a}}</option>
         </select>

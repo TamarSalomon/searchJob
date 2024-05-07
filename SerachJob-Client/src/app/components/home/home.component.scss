@@ -1,3 +1,31 @@
-body {
-    background-color: rgb(19, 17, 17);
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: rgb(239,145,105);
+    text-align: center;
 }
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 5px;
+}
+
+.contact-info li strong {
+  
+    font-weight: bold;
+    margin-right: 5px;
+}
+

@@ -17,12 +17,6 @@ import { cvService } from '../../services/cv.services';
 export class LoginComponent {
    
     loginForm: FormGroup | null = null;
-    user: User = {
-        Id: 0,
-        Name: "",
-        Password: "",
-        Jobfield: JobField.QA
-    };
     constructor(private userSvc: UserService,private router:Router,private cvservice: cvService) { 
         
     }
@@ -48,17 +42,15 @@ export class LoginComponent {
     loginClick() {
         if (this.loginForm?.valid) 
         {
-            this.user.Name = this.loginForm?.controls['name'].value;
-            this.user.Password = this.loginForm?.controls['password'].value;
-            this.userSvc.getUserFromServer(this.user).subscribe((res: any) => {
+            this.userSvc.getUserFromServer(this.loginForm.controls['name'].value ,this.loginForm.controls['password'].value).subscribe((res: any) => {
                 if (res) {
-                    
                    localStorage.setItem("userData", JSON.stringify(res));
                     this.router.navigate(['jobs'])
-                    this.cvservice.jobSelect=[];
+                    this.cvservice.JobsList=[];
                   
                 }
                 else {
+
                     alert('User not found');
                   }
                 });
