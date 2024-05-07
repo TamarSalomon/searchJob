@@ -1,2 +1,58 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+
+.jobs-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   
+}
+
+.jobs {
+    width: 23%;
+    margin-bottom: 20px;
+}
+.jobs-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; 
+}
+
+.jobs {
+    width: 23%; 
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+
+.jobs-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; 
+}
+
+.jobs {
+    width: 23%;
+    box-sizing: border-box;
+    
+}
+
+.jobs-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; 
+}
+
+.jobs {
+    width: calc(23% - 10px); 
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+

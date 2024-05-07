@@ -1,40 +1,38 @@
+.top-navigation {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    color: rgb(239, 145, 105);
+    padding: 10px; 
+}
+
+.top-navigation a {
+    color: rgb(239, 145, 105);
+    margin-top: 0;
+}
+
+
+
+h4 {
+    margin: 0; 
+}
+select {
+    margin-left: auto; 
+}
+
+.top-navigation > *:not(:last-child) {
+    margin-right: 7%;
+}
 
 footer {
     color: rgb(239,145,105);
     text-align: center;
 }
 
-.contact-info {
-    margin-top: 20px;
+img {
+    margin-top: 10px;
+    width: 270px;
+    height: 83%; 
+    margin-right: 0%;
 }
-
-.contact-info h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.contact-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.contact-info li {
-    margin-bottom: 5px;
-}
-
-.contact-info li strong {
-    font-weight: bold;
-    margin-right: 5px;
-}
-.top-navigation{
-    color: rgb(239,145,105);
-
-}
-
-.top-navigation a{
-    color: rgb(239,145,105);
-
-}
-
-
-

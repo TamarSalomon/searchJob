@@ -1,19 +1,18 @@
+<form ngForm>
+    <select #field name="" id="" (change)="filter(field.value, area.value)">
+          <option value="">all domains</option>  
+        <option *ngFor="let f of getFields()">{{f}}</option>
+    </select>
+
+    <select #area name="" id="" (change)="filter(field.value, area.value)">
+         <option value="">all areas</option>  
+        <option *ngFor="let a of getAreas()">{{a}}</option>
+    </select>
+
+</form>
+
 <div class="jobs-div">
-    <form ngForm>
-        <select  #field name="" id="" (change)="filter(field.value, area.value)">
-              <option value="">all domains</option>  
-            <option *ngFor="let f of getFields()">{{f}}</option>
-        </select>
-
-        <select #area name="" id="" (change)="filter(field.value, area.value)">
-             <option value="">all areas</option>  
-            <option *ngFor="let a of getAreas()">{{a}}</option>
-        </select>
-        
-
-    </form>
-
-    <div *ngFor="let job of allJobs " class="job">
+    <div *ngFor="let job of allJobs " class="jobs">
         <div>
             <app-job [job]="job"></app-job>
         </div>

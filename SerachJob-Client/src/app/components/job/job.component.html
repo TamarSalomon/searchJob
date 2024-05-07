@@ -1,8 +1,8 @@
 <div class="job-container">
     <h1>{{job?.jobName}}</h1>
-    <p>field: {{jobField[job?.jobfield!]}}</p>
-    <p>scope of hours: {{job?.scopeOfHours}}</p>
-    <p>area: {{jobArea[job?.area!]}}</p>
+    <p id="p">field: {{jobField[job?.jobfield!]}}</p>
+    <p id="p">scope of hours: {{job?.scopeOfHours}}</p>
+    <p id="p">area: {{jobArea[job?.area!]}}</p>
 
     <details>
         <summary>details</summary>
@@ -14,5 +14,5 @@
         </div>
     </details>
 
-    <button [disabled]="ifSend()" (click)="sendCV()" [ngStyle]="{ 'opacity': ifSend() ? '0.5' : '1', 'cursor': ifSend() ? 'not-allowed' : 'pointer' }" >send CV</button>
+    <button [disabled]="ifSend()" (click)="sendCV()" [ngStyle]="{ 'opacity': ifSend() ? '0.5' : '1', 'cursor': ifSend() ? 'not-allowed' : 'pointer' }">send CV</button>
 </div>
